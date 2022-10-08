@@ -2,11 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
 
+# Visit Profile 
+
+[https://pankajphour.netlify.app](https://pankajphour.netlify.app)
 ## Development server
 
 This is a simple webpage in which we get latitude and longitude coordinates of user and then later display them on the map. We are using openstreetMap and leaflet in this project.
 
-1. Author : Pankaj Phour
+1. Author : Pankaj Phour(https://github.com/Pankaj-Phour)
 2. Project : Location Accesser
 3. Tools used : OpenStreetMap and leaflet
 4. FrameWork used : Angular vesion 14.0.1
