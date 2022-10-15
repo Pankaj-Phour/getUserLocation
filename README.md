@@ -1,7 +1,8 @@
 # Location
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
-
+# View Project 
+[https://pankajphour-getuserlocation.netlify.app](https://pankajphour-getuserlocation.netlify.app)
 # Visit Profile 
 
 [https://pankajphour.netlify.app](https://pankajphour.netlify.app)
