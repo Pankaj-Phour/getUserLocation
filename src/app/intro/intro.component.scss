@@ -1,0 +1,159 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.introbody{
+    width: 100vw;
+    height: 100vh;
+    background: url('/assets/worldMap.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    justify-content: center;
+    // align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 100%;    
+    width: 100%;
+    align-items: center;
+}
+.heading{
+    font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+    background: linear-gradient(90deg, #010122, #fff, #010122);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 4s linear infinite;
+  position: relative;
+}
+.center{
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    width: 100%;
+}
+.diamondBox{
+    max-width: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes shine {
+    0% {
+      background-position-x: -500%;
+    }
+    50%{
+        background-position-x: 0%;
+    }
+    100% {
+      background-position-x: 500%;
+    }
+  }
+
+  .diamond{
+    width: 150px;
+    height: 150px;
+    transform: rotate(45deg);
+    // box-shadow: rgba(255, 255, 255, 0.15) 0px 15px 25px, rgba(255, 255, 255, 0.05) 0px 5px 10px;
+    box-shadow: rgb(255 255 255 / 56%) 0px 0px 1px 2px;
+    // border: 2px solid white;
+    // background-color: #010122;
+    text-align: center;
+    cursor: pointer;
+}
+.diamond:hover{
+    box-shadow: rgba(255, 255, 255, 0.56) 0px 12px 40px 4px;
+}
+.diamondText{
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+    font-family:'Courier New', Courier, monospace;
+}
+.input{
+    max-width: 100%;
+    width: 45%;
+}
+form{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    row-gap: 10px;
+}
+input{
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+.text{
+    color:white;
+}
+.btn{
+    background-color: transparent;
+    padding: 6px;
+    padding-inline: 15px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 6px;
+}
+.formGroup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    height: 100%;
+    column-gap: 10px;
+}
+
+
+@media only screen and (max-width: 1099px){
+    .heading{
+        font-size: 22px;
+    }
+    .center{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        row-gap: 90px;
+    }
+    // .diamond{
+    //     border-radius: 50%;
+    // }
+    .input{
+        max-width: 100%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,36 @@
+<div class="introbody">
+    <div class="container">
+        <div class="content">
+            <div class="heading">
+                AI Powered Location Tracker Project
+            </div>
+            <div class="center">
+                <div class="diamondBox">
+            <div class="diamond" (click)="profile()">
+                <div class="diamondText">
+                    View Other Projects
+                </div>
+            </div>
+        </div>
+        <div class="diamondBox" *ngIf="!input">
+            <div class="diamond" (click)="showInput()" >
+                <div class="diamondText">
+                    See Your Location
+                </div>
+            </div>
+        </div>
+            <div class="input" *ngIf="input">
+                <form [formGroup]="inputForm">
+                    <div class="formGroup">
+                        <label for="name" class="text">
+                           Enter Your Name 
+                        </label>
+                        <input type="text" formControlName="name">
+                    </div>
+                    <button class="btn" (click)="submit()" [disabled]="inputForm.invalid">Submit</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
