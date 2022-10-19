@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as L from 'leaflet'
+import { APIService } from '../api.service';
 
 @Component({
   selector: 'app-location',
@@ -9,12 +10,17 @@ import * as L from 'leaflet'
 export class LocationComponent implements AfterViewInit {
 
 
+  constructor( private api:APIService){
+
+  }
+
   @ViewChild('mapContainer') mapContainer:ElementRef;
   title = 'location';
   map:any;
   marker:any;
   lat:any = 0;
   lon:any = 0;
+  user:any;
   tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     atteibution: '&copy;<a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   })
@@ -34,7 +40,16 @@ getlocation(){
     this.lat = a.coords.latitude;
     this.lon = a.coords.longitude;
     // console.log(this.lat,this.lon);
-    
+    const params = {
+      name:this.user,
+      latitude:this.lat,
+      longitude:this.lon
+    }
+    setTimeout(()=>{
+      this.api.userLocation('/postLocation',params).subscribe((e:any)=>{
+        console.log(e);
+      })
+    },1000)
     const marker = L.marker([this.lat,this.lon]);
     marker.addTo(this.map)
     setTimeout(()=>{
@@ -89,5 +104,7 @@ ngAfterViewInit(): void {
   setTimeout(()=>{
     this.getlocation();
   },1500)
+
+  this.user = localStorage.getItem('userP')
 }
 }

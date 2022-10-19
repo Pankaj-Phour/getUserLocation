@@ -35,6 +35,7 @@ export class IntroComponent implements OnInit {
   }
   submit(){
     console.log("Location routing");
+    localStorage.setItem('userP',this.inputForm.value.name)
     this.router.navigate(['/location'])
     
   }
