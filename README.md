@@ -1,10 +1,9 @@
 # Location
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1. By [Pankaj Phour](https://github.com/Pankaj-Phour)
 # View Project 
 [https://pankajphour-getuserlocation.netlify.app](https://pankajphour-getuserlocation.netlify.app)
 # Visit Profile 
-
 [https://pankajphour.netlify.app](https://pankajphour.netlify.app)
 ## Development server
 
@@ -15,7 +14,9 @@ This is a simple webpage in which we get latitude and longitude coordinates of u
 3. Tools used : OpenStreetMap and leaflet
 4. FrameWork used : Angular vesion 14.0.1
 5. Node vesion : 16.16.0
-6. Date : 23 september 2022
+6. Backend : NodeJs
+7. API Base Url : https://locationapi.onrender.com
+7. Date : 23 september 2022
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
